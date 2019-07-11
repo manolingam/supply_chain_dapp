@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
+
+body {
+  background-color:#fff;
+  padding: 2em;
+  font-family: 'Arvo', serif;
+  color: #212121;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#ftc-harvest {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h3 {
+  color: blueviolet;
+  text-align: center;
+}
+
+.bold { 
+  font-weight: bolder;
+}
+
+input {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 10px 0;
+}
+
+button {
+    font-family: 'Arvo', serif;
+    cursor: pointer;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #00BCD4;
+    font-size: 16px;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+p {
+  color: #0097A7;
+}
+
+.fetch-value {
+  display: flex;
+  flex-direction: row;
+}
+
+.fetch-one-value, .fetch-two-value {
+  background-color:#0097A7;
+  color:black;
+  width:50%;
+  padding:30px;
+  border-radius: 4px;
+  background-color: #f8f8f8; 
+  margin: 10px;
+}
+
+.button-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.sell { 
+  background-color: white;
+  color: #D1C4E9;
+}
+
+.ftc-intro {
+  background-color:#0097A7;
+  color:white;
+  width:100%;
+  padding:20px;
+}
+
+.form-group {
+  background-color:#0097A7;
+  color:black;
+  width:50%;
+  padding:30px;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+}
+
+.upc_id {
+  color:black;
+  width:50%;
+  padding:30px;
+  border-radius: 4px;
+}
+
+.form-break {
+  background-color:#fff;
+  color:white;
+  width:100%;
+  padding:5px;
+}
+
+.horizontal-rule {
+  background-color:#BDBDBD;
+}

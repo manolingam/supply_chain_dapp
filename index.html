@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fair Trade Coffee</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Fair Trade Coffee</h1>
+        <hr>
+        <p style="text-align: center;">Prove the authenticity of coffee using the Ethereum blockchain.</p>
+        <h3 style="text-align: center; color:black;">Connected to:</h3>
+        <h3 id="current-address"></h3>
+    </div>
+    
+    <div id="ftc-harvest">
+        <div class="fetch-value">
+            <div class="upc_id">
+                Total Products Registered: <p id="current-sku"></p>
+                UPC
+                <br>
+                <input type="number" id="upc" name="upc" value="1"<br>
+                <div class="form-group">
+                    <div class="button-div">
+                        <button class="btn-fetchOne" id="button" type="button" data-id="9">Fetch Farm Details</button>
+                        <button class="btn-fetchTwo" id="button" type="button" data-id="10">Fetch Product Details</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="fetch-one-value">
+                <h4 style="text-align: center">Farm Details</h4>
+                SKU: <p id="sku-value">-</p>
+                Owner ID: <p id="owner-id-value">-</p>
+                Farmer ID: <p id="farmer-id-value">-</p>
+                Farm name: <p id="farm-name-value">-</p>
+                Farm info: <p id="farm-info-value">-</p>
+                Farm latitude: <p id="farm-lat-value">-</p>
+                Farm longitude: <p id="farm-long-value">-</p>
+            </div>
+            <div class="fetch-two-value">
+                <h4 style="text-align: center">Product Details</h4>
+                UPC: <p id="upc-value">-</p>
+                Product ID: <p id="product-id-value">-</p>
+                Product Note: <p id="product-note-value">-</p>
+                Product Price: <p id="product-price-value">-</p>
+                Item State: <p id="item-state-value">-</p>
+                Distributor ID: <p id="distributor-id-value">-</p>
+                Retailer ID: <p id="retailer-id-value">-</p>
+                Consumer ID: <p id="consumer-id-value">-</p>
+            </div>
+        </div>
+        <div class=form-break></div>
+        <h2>Supply Chain Process</h2>
+        <div class="form-group">
+            <h4 style="text-align: center; color: blueviolet;">Farmer Section</h4>
+            UPC ID
+            <br>
+            <input type="number" id="upc-farmer"><br>
+            Farmer ID
+            <br>
+            <input type="text" id="originFarmerID" name="originFarmerID" size="50"><br>
+            Farm Name
+            <br>
+            <input type="text" id="originFarmName" name="originFarmName"><br>
+            Farm Information
+            <br>
+            <input type="text" id="originFarmInformation" name="originFarmInformation"><br>
+            Farm Latitude
+            <br>
+            <input type="text" id="originFarmLatitude" name="originFarmLatitude"><br>
+            Farm Longitude
+            <br>
+            <input type="text" id="originFarmLongitude" name="originFarmLongitude"><br>
+            Product Notes
+            <br>
+            <input type="text" id="productNotes" name="productNotes" size="60"><br>
+            <button class="btn-harvest" id="button" type="button" data-id="1">Harvest</button>
+            <button class="btn-process" id="button" type="button" data-id="2">Process</button>
+            <button class="btn-pack" id="button" type="button" data-id="3">Pack</button><br><br>
+            What's your selling price?
+            <br>
+            <input type="number" id="productPrice" name="productPrice"> ETH<br>
+            <button class="btn-forsale" id="button" type="button" data-id="4">ForSale</button><br><br><hr>
+            <h4 style="text-align: center; color: blueviolet;">Distributor Section</h4>
+            UPC ID
+            <br>
+            <input type="number" id="upc-distributor"><br>
+            Distributor ID
+            <br>
+            <input type="text" id="distributorID" name="distributorID" size="50"><br>
+            <button class="btn-buy" id="button" type="button" data-id="5">Buy</button>
+            <button class="btn-ship" id="button" type="button" data-id="6">Ship</button><br><br><hr>
+            <h4 style="text-align: center; color: blueviolet;">Retailer Section</h4>
+            UPC ID
+            <br>
+            <input type="number" id="upc-retailer"><br>
+            Retailer ID
+            <br>
+            <input type="text" id="retailerID" name="retailerID" size="50"><br>
+            <button class="btn-receive" id="button" type="button" data-id="7">Receive</button><br><br><hr>
+            <h4 style="text-align: center; color: blueviolet;">Consumer Section</h4>
+            UPC ID
+            <br>
+            <input type="number" id="upc-consumer"><br>
+            Consumer ID
+            <br>
+            <input type="text" id="consumerID" name="consumerID" size="50"><br>
+            <button class="btn-purchase" id="button" type="button" data-id="8">Purchase</button>
+        </div>
+        <div class=form-break></div>
+        <hr>
+    </div>
+
+    <h2>Transaction History<span id="ftc-history"></span></h2>
+    <div>
+        <ul id="ftc-events">
+            <!-- Events will appear here from app.js -->
+        </ul>
+        <br>
+        <hr>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="js/web3.min.js"></script> -->
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
